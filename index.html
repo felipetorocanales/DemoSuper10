@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super 10 Chile | Supermercado Online • Precios Súper Baratos</title>
+  <meta name="description" content="Bienvenido al nuevo supermercado online de Super 10. Ahorro de verdad, marcas propias que rinden más, ofertas Super Lukas y despacho a todo Chile.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://images.ctfassets.net/63tonbtz0lhl/15NFBD4GhyKsRlVeECmMOC/5648e66a51dab5dd7c61e1517b5def29/logo-s10-v2.png">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span>🇨🇱 ¡Nuevo sitio e-commerce Super 10! Ahorro garantizado en cada compra</span>
+        <span class="top-bar-badge">CLUB 10 ACTIVO</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="#localesSection" class="top-bar-link">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Nuestros Locales
+        </a>
+        <a href="https://www.unipay.cl/" target="_blank" class="top-bar-link">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          Tarjeta Unipay
+        </a>
+        <a href="tel:6006000010" class="top-bar-link">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Ayuda y Contacto
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <!-- Logo -->
+      <a href="#" class="logo-container">
+        <img src="https://images.ctfassets.net/63tonbtz0lhl/15NFBD4GhyKsRlVeECmMOC/5648e66a51dab5dd7c61e1517b5def29/logo-s10-v2.png" alt="Super 10 Logo" class="logo-img">
+        <div class="logo-slogan">
+          <span class="logo-slogan-top">Súper Barato</span>
+          <span class="logo-slogan-bottom">El ahorro que se nota</span>
+        </div>
+      </a>
+
+      <!-- Fulfillment Mode Selector (Despacho / Retiro) -->
+      <button class="fulfillment-btn" id="fulfillmentBtn" title="Cambiar dirección o tienda de retiro">
+        <div class="fulfillment-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        </div>
+        <div>
+          <div class="fulfillment-text-label" id="fulfillmentLabel">Entregar en:</div>
+          <div class="fulfillment-text-value" id="fulfillmentValue">
+            Santiago Centro, RM
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+        </div>
+      </button>
+
+      <!-- Search Bar -->
+      <div class="search-wrapper">
+        <div class="search-box">
+          <svg width="20" height="20" fill="none" stroke="#64748B" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Buscar por producto, marca (ej: aceite, arroz, amada masa, detergente)..." autocomplete="off">
+          <button class="search-btn" title="Buscar">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+
+        <!-- Autocomplete Dropdown -->
+        <div class="search-results-dropdown" id="searchResultsDropdown"></div>
+      </div>
+
+      <!-- Actions: Club 10 & Cart -->
+      <div class="header-actions">
+        <div class="club10-pill" onclick="showToast('Estás acumulando puntos y descuentos Club 10')">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span>Club 10</span>
+        </div>
+
+        <button class="cart-trigger-btn" id="cartTriggerBtn">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+          <span id="cartHeaderSubtotal">$0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="nav-bar">
+    <div class="container">
+      <div class="nav-categories">
+        <button class="category-dropdown-btn" onclick="document.getElementById('catalogSection').scrollIntoView({behavior:'smooth'})">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          Todas las Categorías
+        </button>
+
+        <a href="#catalogSection" class="nav-pill nav-pill-highlight" id="superLukasNavPill">
+          🔥 Zona Super Lukas ($1.000 y $2.000)
+        </a>
+        <a href="#brandsSection" class="nav-pill">
+          ⭐ Nuestras Marcas Propias
+        </a>
+        <a href="#flashDealsSection" class="nav-pill">
+          ⚡ Ofertas del Día
+        </a>
+        <a href="#flyerSection" class="nav-pill">
+          📄 Catálogo Digital
+        </a>
+        <a href="#localesSection" class="nav-pill">
+          📍 Locales y Horarios
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- HERO SLIDER -->
+    <section class="hero-slider-section">
+      <div class="slider-container" id="heroSlider">
+        <!-- Slide 1 -->
+        <div class="slide active">
+          <img src="https://images.ctfassets.net/63tonbtz0lhl/hppl8QZ0VJAwCNuc9RfY4/2c20ddbe52629b5de200f2aa8fa6cde2/S10-01-SUPER.BARATO-DESK-A.webp" alt="Super Barato" class="slide-bg-img">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="slide-tag">Promoción Destacada</span>
+            <h1 class="slide-title">Precios Súper Baratos Garantizados</h1>
+            <p class="slide-subtitle">Aceite Belmont 1L + Arroz Merkat Grado 2 a precios que de verdad se notan en la caja.</p>
+            <a href="#catalogSection" class="slide-btn">
+              Ver Ofertas
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="https://images.ctfassets.net/63tonbtz0lhl/5h3YIOfIPN3auoPmj9GILb/cc9bb3482abb65dd301432156659b444/S10-01-SUPER.LUKAS-DESK-A.webp" alt="Super Lukas" class="slide-bg-img">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="slide-tag">Ofertas Súper Lukas</span>
+            <div class="slide-title">Todo a $1.000 y $2.000</div>
+            <p class="slide-subtitle">Detergentes, galletas, conservas y panadería seleccionada a precios redondos.</p>
+            <a href="#flashDealsSection" class="slide-btn">
+              Aprovechar Súper Lukas
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="https://images.ctfassets.net/63tonbtz0lhl/58BZ73A66sphYM9ew8jU04/7d8bb4e56e3a780b953a007d0668469b/BANNER_DUO_-_UNIPAY.webp" alt="Unipay" class="slide-bg-img">
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="slide-tag">Beneficio Tarjeta Unipay</span>
+            <div class="slide-title">15% Descuento Adicional</div>
+            <p class="slide-subtitle">Paga con tu tarjeta Unipay en tu supermercado Super 10 favorito o compra online.</p>
+            <button class="slide-btn" onclick="toggleCartDrawer()">
+              Comprar con Descuento
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Arrows & Dots -->
+        <button class="slider-arrow slider-prev" id="sliderPrev" title="Anterior">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="slider-arrow slider-next" id="sliderNext" title="Siguiente">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="slider-dots">
+          <span class="slider-dot active"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE PROPOSITIONS -->
+    <section class="value-props">
+      <div class="value-props-grid">
+        <div class="value-prop-item">
+          <div class="value-prop-icon">🚚</div>
+          <div>
+            <div class="value-prop-title">Despacho en 60 mins o Retiro</div>
+            <div class="value-prop-desc">Entregas el mismo día o retiro gratis en tienda</div>
+          </div>
+        </div>
+
+        <div class="value-prop-item">
+          <div class="value-prop-icon">🏷️</div>
+          <div>
+            <div class="value-prop-title">Precios Súper Bajos</div>
+            <div class="value-prop-desc">El ahorro más inteligente del mercado familiar</div>
+          </div>
+        </div>
+
+        <div class="value-prop-item">
+          <div class="value-prop-icon">💳</div>
+          <div>
+            <div class="value-prop-title">Paga con Unipay y Ahorra</div>
+            <div class="value-prop-desc">15% de descuento adicional en tus compras</div>
+          </div>
+        </div>
+
+        <div class="value-prop-item">
+          <div class="value-prop-icon">🛡️</div>
+          <div>
+            <div class="value-prop-title">Marcas de Calidad SMU</div>
+            <div class="value-prop-desc">Garantía total de frescura y rendimiento</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLASH DEALS: SUPER LUKAS ZONE -->
+    <section class="flash-deals-section" id="flashDealsSection">
+      <div class="flash-deals-card">
+        <div class="flash-deals-header">
+          <div class="flash-deals-title-area">
+            <span class="flash-deals-badge">⚡ OFERTAS RELÁMPAGO</span>
+            <h2 class="flash-deals-heading">Zona Súper Lukas: Lo mejor a precios redondos</h2>
+          </div>
+
+          <div class="flash-deals-timer">
+            <span>Termina en:</span>
+            <span class="timer-box" id="timerHours">06</span>:
+            <span class="timer-box" id="timerMinutes">42</span>:
+            <span class="timer-box" id="timerSeconds">15</span>
+          </div>
+        </div>
+
+        <div class="flash-deals-grid" id="flashDealsContainer"></div>
+      </div>
+    </section>
+
+    <!-- BRANDS SECTION (MARCAS PROPIAS) -->
+    <section class="brands-section" id="brandsSection">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Nuestras Marcas Propias</h2>
+          <p class="section-subtitle">Marcas exclusivas que rinden más, con la máxima calidad y menor precio garantizado.</p>
+        </div>
+        <a href="#catalogSection" class="section-link" onclick="resetFilters()">
+          Ver todo el catálogo
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="brands-grid" id="brandsContainer"></div>
+    </section>
+
+    <!-- MAIN CATALOG & PRODUCTS -->
+    <section class="catalog-section" id="catalogSection">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Productos Destacados de Super 10</h2>
+          <p class="section-subtitle">Explora los productos favoritos de las familias chilenas.</p>
+        </div>
+        <span style="font-weight: 700; color: var(--s10-muted); font-size: 0.85rem;" id="resultsCount">80 productos</span>
+      </div>
+
+      <!-- Toolbar / Filters -->
+      <div class="catalog-toolbar">
+        <div class="catalog-filters">
+          <button class="filter-btn active" data-category="all">Todos los Productos</button>
+          <button class="filter-btn" data-category="Panadería y Pastelería">🍞 Panadería & Masas</button>
+          <button class="filter-btn" data-category="Despensa y Abarrotes">🍝 Despensa & Alimentos</button>
+          <button class="filter-btn" data-category="Limpieza y Cuidado del Hogar">🧼 Limpieza & Aseo</button>
+          <button class="filter-btn" data-category="Pescados y Congelados">🐟 Pescados & Mariscos</button>
+          <button class="filter-btn" data-category="Papelería y Hogar">🧻 Papelería & Hogar</button>
+          <button class="filter-btn" data-category="Lácteos y Cecinas">🧀 Lácteos & Cecinas</button>
+        </div>
+
+        <div class="catalog-sort">
+          <span class="sort-label">Ordenar por:</span>
+          <select id="sortSelect" class="sort-select">
+            <option value="featured">Destacados</option>
+            <option value="discount">Mayor Descuento %</option>
+            <option value="price-asc">Menor Precio ($ - $$$)</option>
+            <option value="price-desc">Mayor Precio ($$$ - $)</option>
+            <option value="rating">Mejor Valorados</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="product-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- FOLLETO DIGITAL INTERACTIVO -->
+    <section class="flyer-section" id="flyerSection">
+      <div class="flyer-content">
+        <span class="flyer-tag">Catálogo Quincenal</span>
+        <h2 class="flyer-title">Revisa el Catálogo Digital de Super 10</h2>
+        <p class="flyer-desc">Descubre todas las ofertas impresas disponibles en tu tienda más cercana. Precios actualizados cada dos semanas para que planifiques tus compras con anticipación.</p>
+        <button class="flyer-btn" onclick="showToast('Abriendo visor interactivo del folleto...')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          Hojear Catálogo Interactivo
+        </button>
+      </div>
+
+      <div class="flyer-preview">
+        <img src="https://images.ctfassets.net/63tonbtz0lhl/1PgUxpn3RXsghnZVOG1ocB/fa4cc55683ab51922a3991de16d376bc/BANNER_DUO_-_CLUB10.webp" alt="Catálogo Super 10">
+      </div>
+    </section>
+
+    <!-- STORES LOCATOR SECTION -->
+    <section class="stores-section" id="localesSection">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Encuentra tu Super 10 más Cercano</h2>
+          <p class="section-subtitle">Contamos con más de 50 locales en todo Chile con servicios de retiro y compras presenciales.</p>
+        </div>
+      </div>
+
+      <div class="stores-filter-row">
+        <input type="text" id="storesSearchInput" class="stores-search-input" placeholder="Buscar por comuna (ej: Santiago, Viña del Mar, Concepción, Maipú)..." oninput="renderStores(this.value)">
+      </div>
+
+      <div class="stores-grid" id="storesContainer"></div>
+    </section>
+
+  </main>
+
+  <!-- CART SLIDEOVER DRAWER -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        Tu Carro de Compras
+      </h3>
+      <button class="cart-close-btn" id="cartCloseBtn" title="Cerrar carro">&times;</button>
+    </div>
+
+    <!-- Free Delivery Progress Meter -->
+    <div class="free-delivery-meter">
+      <div class="meter-text" id="freeDeliveryText">
+        <span>Agrega <strong>$25.000</strong> más para Despacho Gratis</span>
+        <span>0%</span>
+      </div>
+      <div class="meter-bar-bg">
+        <div class="meter-bar-fill" id="freeDeliveryFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-drawer-body" id="cartItemsList"></div>
+
+    <!-- Footer / Checkout Summary -->
+    <div class="cart-drawer-footer">
+      <!-- Coupon Box -->
+      <div class="coupon-row">
+        <input type="text" id="couponInput" class="coupon-input" placeholder="Código de descuento (ej: SUPER10)">
+        <button id="applyCouponBtn" class="coupon-btn">Aplicar</button>
+      </div>
+
+      <!-- Unipay 15% Toggle -->
+      <div class="unipay-toggle-box">
+        <div>
+          <div class="unipay-toggle-text">💳 Pagar con Tarjeta Unipay</div>
+          <div style="font-size: 0.72rem; color: #1E40AF;">Ahorra 15% extra en todo tu pedido</div>
+        </div>
+        <label style="position: relative; display: inline-block; width: 40px; height: 22px;">
+          <input type="checkbox" id="unipayToggle" style="opacity: 0; width: 0; height: 0;">
+          <span style="position: absolute; cursor: pointer; inset: 0; background-color: #CBD5E1; transition: .3s; border-radius: 34px;" id="unipaySlider"></span>
+        </label>
+      </div>
+
+      <!-- Summary Rows -->
+      <div class="cart-summary-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal">$0</span>
+      </div>
+      <div class="cart-summary-row" id="cartDiscountRow" style="display: none; color: var(--s10-green);">
+        <span>Descuento aplicado:</span>
+        <span id="cartDiscountAmount">-$0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Despacho estimado:</span>
+        <span id="cartDeliveryFee">$2.990</span>
+      </div>
+      <div class="cart-summary-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0</span>
+      </div>
+
+      <button class="btn-checkout" id="checkoutBtn">
+        <span>Iniciar Pago Seguro</span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="modal-backdrop" id="quickViewModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeQuickView()">&times;</button>
+      <div id="quickViewContent"></div>
+    </div>
+  </div>
+
+  <!-- FULFILLMENT SELECTOR MODAL -->
+  <div class="modal-backdrop" id="fulfillmentBackdrop">
+    <div class="modal-box" style="padding: 2rem;">
+      <button class="modal-close-btn" id="fulfillmentModalClose">&times;</button>
+      <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--s10-navy);">¿Cómo quieres recibir tu compra?</h3>
+      <p style="font-size: 0.85rem; color: var(--s10-muted); margin-bottom: 1.5rem;">Elige si prefieres despacho directo a tu puerta o retiro gratis en tu local Super 10 más cómodo.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+        <button style="border: 2px solid var(--s10-red); background: #FEF2F2; padding: 1.25rem; border-radius: var(--radius-lg); text-align: left;" onclick="document.getElementById('deliveryInputBox').style.display='block';">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🚚</div>
+          <div style="font-weight: 800; color: var(--s10-navy); font-size: 0.95rem;">Despacho a Domicilio</div>
+          <div style="font-size: 0.75rem; color: var(--s10-muted);">Llega hoy en 60 mins o programado</div>
+        </button>
+
+        <button style="border: 1px solid var(--s10-border); background: white; padding: 1.25rem; border-radius: var(--radius-lg); text-align: left;" onclick="document.getElementById('deliveryInputBox').style.display='none'; saveFulfillmentChoice('pickup');">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🏬</div>
+          <div style="font-weight: 800; color: var(--s10-navy); font-size: 0.95rem;">Retiro en Tienda</div>
+          <div style="font-size: 0.75rem; color: var(--s10-green); font-weight: 700;">¡100% GRATIS!</div>
+        </button>
+      </div>
+
+      <div id="deliveryInputBox">
+        <label style="font-size: 0.82rem; font-weight: 700; color: var(--s10-navy); display: block; margin-bottom: 0.4rem;">Ingresa tu dirección o comuna:</label>
+        <div style="display: flex; gap: 0.5rem;">
+          <input type="text" id="modalAddressInput" class="stores-search-input" value="Santiago Centro, Región Metropolitana" style="flex: 1;">
+          <button class="btn-checkout" style="width: auto; padding: 0.55rem 1.25rem;" onclick="saveFulfillmentChoice('delivery')">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-backdrop" id="checkoutBackdrop">
+    <div class="modal-box" style="padding: 2rem;">
+      <button class="modal-close-btn" id="checkoutModalClose">&times;</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💳</div>
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--s10-navy);">Confirmación de Pago Seguro</h3>
+        <p style="font-size: 0.85rem; color: var(--s10-muted);">Pasarela de pago cifrada con certificación Webpay Plus & Unipay</p>
+      </div>
+
+      <div id="checkoutOrderSummary"></div>
+
+      <button class="btn-checkout" onclick="completeMockOrder()">
+        <span>Pagar y Completar Pedido</span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div>
+          <img src="https://images.ctfassets.net/63tonbtz0lhl/3ZKvGgiWRsKiIvExwLbw2u/dafd5c08c233d07ce79e0dbd57965d66/logo_footer.png" alt="Super 10 Footer" class="footer-logo">
+          <p class="footer-about-text">
+            Super 10 es la cadena de supermercados de ahorro de SMU, pensada para que las familias chilenas encuentren siempre los precios más bajos y marcas propias con la máxima calidad.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="https://facebook.com" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: #1E293B; display: flex; align-items: center; justify-content: center; color: white;">f</a>
+            <a href="https://instagram.com" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: #1E293B; display: flex; align-items: center; justify-content: center; color: white;">in</a>
+            <a href="https://youtube.com" target="_blank" style="width: 32px; height: 32px; border-radius: 50%; background: #1E293B; display: flex; align-items: center; justify-content: center; color: white;">yt</a>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <h4 class="footer-col-title">Marcas Exclusivas</h4>
+          <ul class="footer-links-list">
+            <li><a href="#catalogSection" class="footer-link" onclick="selectBrand('Amada Masa')">Amada Masa (Panadería)</a></li>
+            <li><a href="#catalogSection" class="footer-link" onclick="selectBrand('Nuestra Cocina')">Nuestra Cocina (Despensa)</a></li>
+            <li><a href="#catalogSection" class="footer-link" onclick="selectBrand('Merkat')">Merkat (Conservas)</a></li>
+            <li><a href="#catalogSection" class="footer-link" onclick="selectBrand('Smart Clean')">Smart Clean (Aseo)</a></li>
+            <li><a href="#catalogSection" class="footer-link" onclick="selectBrand('Azul Profundo')">Azul Profundo (Congelados)</a></li>
+            <li><a href="#catalogSection" class="footer-link" onclick="selectBrand('Nubelin')">Nubelin (Papelería)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <h4 class="footer-col-title">Servicio al Cliente</h4>
+          <ul class="footer-links-list">
+            <li><a href="#localesSection" class="footer-link">Locales y Cobertura</a></li>
+            <li><a href="https://www.unipay.cl/" target="_blank" class="footer-link">Tarjeta Unipay</a></li>
+            <li><a href="#" class="footer-link">Preguntas Frecuentes</a></li>
+            <li><a href="#" class="footer-link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer-link">Políticas de Privacidad</a></li>
+            <li><a href="#" class="footer-link">Canal Ético SMU</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div>
+          <h4 class="footer-col-title">Club 10 Newsletter</h4>
+          <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem;">Suscríbete y recibe cupones de descuento exclusivos directamente en tu correo.</p>
+          <div class="newsletter-box">
+            <input type="email" class="newsletter-input" placeholder="Tu correo electrónico">
+            <button class="newsletter-btn" onclick="showToast('¡Gracias por unirte al Club 10!')">Inscribirme</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Todos los derechos reservados a Super 10 • Una empresa filial de SMU S.A.
+        </div>
+        <div class="payment-badges">
+          <span class="payment-badge">Webpay Plus</span>
+          <span class="payment-badge">Redcompra</span>
+          <span class="payment-badge">Unipay</span>
+          <span class="payment-badge">BancoEstado</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
